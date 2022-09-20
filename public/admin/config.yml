@@ -1,0 +1,74 @@
+backend:
+  name: github
+  repo: phiagallery/phia.gallery
+  branch: master
+  local_backend: true # to make CMS work with the local git without going over the server when in development mode
+  base_url: "https://phiagallery.vercel.app/" # our site's base URL
+  auth_endpoint: "api/auth" # used together with base_url for our custom endpoints (more on this later)
+publish_mode: editorial_workflow
+media_folder: "/public/images"
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: Home
+        name: home
+        file: "_static_pages/home.md"
+        media_folder: "/public/images/home"
+        public_folder: ""
+        editor:
+        preview: false
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+          - label: "Tagline"
+            name: "tagline"
+            widget: "list"
+            allow_add: true
+          - label: "About me image (desktop)"
+            name: "aboutImageDesktop"
+            widget: "image"
+          - label: "About me image (mobile)"
+            name: "aboutImageMobile"
+            widget: "image"
+          - label: "Hero background image"
+            name: "heroBackgroundImage"
+            widget: "image"
+          - label: "About Me text"
+            name: "body"
+            widget: "markdown"
+  - name: "portfolio" # Used in routes, e.g., /admin/collections/blog
+    label: "Portfolio" # Used in the UI
+    folder: "_portfolio" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    media_folder: "/public/images/portfolio"
+    public_folder: ""
+    editor:
+      preview: false
+    fields: # The fields for each document, usually in front matter
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Description"
+        name: "description"
+        widget: "string"
+      - label: "Excerpt"
+        name: "excerpt"
+        widget: "string"
+      - label: "Date"
+        name: "date"
+        format: "YYYY-MM-DDTHH:mm"
+        widget: "datetime"
+        dateFormat: "DD/MM/YYYY"
+        timeFormat: ""
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        allow_add: true
+        default: ["review"]
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
