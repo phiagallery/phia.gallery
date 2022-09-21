@@ -83,6 +83,7 @@ export async function getStaticProps({ params }: any) {
     "slug",
     "content",
     "image",
+    "audio",
     "description",
     "tags",
   ]);

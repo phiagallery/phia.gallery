@@ -4,13 +4,7 @@ import DateFormatter from "@core/genericComponents/DateFormatter";
 import PrintMarkdownHTML from "@core/genericComponents/PrintMarkdownHTML";
 import Link from "@core/genericComponents/links/NoScrollLink";
 
-export default function Article({
-  title,
-  imgSrc,
-  imgSrcSet,
-  date,
-  content,
-}: any) {
+export default function Article({ title, imgSrc, audio, date, content }: any) {
   return (
     <article className="flex flex-col items-center justify-center text-center pt-6 md:pt-32">
       {/* <img src={imgSrc} srcSet={imgSrcSet} alt={title} className="md:h-50vh" /> */}
@@ -26,7 +20,17 @@ export default function Article({
         // layout="responsive"
         // layout="fill"
       />
-      {/* </div> */}
+      {/* audio */}
+      {/* <p>
+        <audio
+          src="https://thinknews.com.ng/wp-content/uploads/2022/07/Harry_Styles_Late_Night_Talking_(thinkNews.com.ng).mp3"
+          controls="controls"
+        ></audio>
+        <audio src={audio} autoPlay loop playing={playing} />
+      </p> */}
+      <p>
+        <audio src={audio} autoPlay loop />
+      </p>
       <h1 className="text-4xl md:text-6xl font-title text-pink-custom mt-4 md:mt-16 mb-4">
         {title}
       </h1>
