@@ -3,6 +3,7 @@ title: "Best in Grade 12 art"
 description: "Exhibit opened last Saturday with a reception in the gallery"
 excerpt: "Sophia Guan, a Grade 12 student at Gleneagle secondary in Coquitlam, with her painting called Crossing. It shows a canal with a Chinese village to the left and Venice at the right"
 image: "Best_in_Grade12_art.png"
+audio: ""
 date: "2020-01-30T00:00:00"
 tags: ["review"]
 ---
@@ -22,4 +23,3 @@ Organized by Gleneagle secondary school teacher Robyn Corft, Emerging Talent is 
 Retired SD43 art teachers Mike McElgunn, Jerry Pietrasko and Melanie Stokes were invited to select the art that would be displayed and, in total, chose 65 works from five high schools: Centennial, Gleneagle, Port Moody, Dr. Charles Best and Port Moody.
 
 ......
-
