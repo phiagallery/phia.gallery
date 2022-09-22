@@ -6,6 +6,7 @@ date: 2022-09-22T11:57
 image: testing_image.jpg
 tags:
   - review
+  - music
 ---
 Lyrics
 Things haven't been quite the same
