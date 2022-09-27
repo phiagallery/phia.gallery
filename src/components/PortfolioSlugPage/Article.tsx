@@ -4,7 +4,19 @@ import DateFormatter from "@core/genericComponents/DateFormatter";
 import PrintMarkdownHTML from "@core/genericComponents/PrintMarkdownHTML";
 import Link from "@core/genericComponents/links/NoScrollLink";
 
-export default function Article({ title, imgSrc, audio, date, content }: any) {
+const ConditionalWrapper = ({ children, condition }: any) => {
+  if (condition !== undefined && condition.includes(".mp3")) return children;
+  else return "";
+};
+
+export default function Article({
+  title,
+  imgSrc,
+  // background_audio: string,
+  background_audio,
+  date,
+  content,
+}: any) {
   return (
     <article className="flex flex-col items-center justify-center text-center pt-6 md:pt-32">
       {/* <img src={imgSrc} srcSet={imgSrcSet} alt={title} className="md:h-50vh" /> */}
@@ -20,17 +32,15 @@ export default function Article({ title, imgSrc, audio, date, content }: any) {
         // layout="responsive"
         // layout="fill"
       />
-      {/* audio */}
-      {/* <p>
-        <audio
-          src="https://thinknews.com.ng/wp-content/uploads/2022/07/Harry_Styles_Late_Night_Talking_(thinkNews.com.ng).mp3"
-          controls="controls"
-        ></audio>
-        <audio src={audio} autoPlay loop playing={playing} />
-      </p> */}
-      <p>
-        <audio src={audio} autoPlay loop />
-      </p>
+      {/* audio How to check whether file exist or not?   .indexOf('nice') !== -1*/}
+      <ConditionalWrapper condition={background_audio}>
+        {/* <ConditionalWrapper condition={background_audio.indexOf(".mp3") !== -1}> */}
+        <p className="font-title my-2 md:my-8 text-lg">
+          <audio controls autoPlay loop>
+            <source src={background_audio} type="audio/mpeg" />
+          </audio>
+        </p>
+      </ConditionalWrapper>
       <h1 className="text-4xl md:text-6xl font-title text-pink-custom mt-4 md:mt-16 mb-4">
         {title}
       </h1>

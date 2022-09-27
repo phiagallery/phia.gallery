@@ -18,7 +18,16 @@ export default function Post({ post }: any) {
     return <ErrorPage statusCode={404} />;
   }
 
-  const { title, image, date, content, description, slug, tags } = post;
+  const {
+    title,
+    image,
+    background_audio,
+    date,
+    content,
+    description,
+    slug,
+    tags,
+  } = post;
   const canonical = `${BASE_URL}${slug}`;
   // const {
   //   src,
@@ -66,6 +75,7 @@ export default function Post({ post }: any) {
               title={title}
               imgSrc={imgsrc}
               // imgSrcSet={srcSet}
+              background_audio={background_audio}
               date={date}
               content={content}
             />
@@ -83,7 +93,7 @@ export async function getStaticProps({ params }: any) {
     "slug",
     "content",
     "image",
-    "audio",
+    "background_audio",
     "description",
     "tags",
   ]);

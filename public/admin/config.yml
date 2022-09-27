@@ -17,7 +17,7 @@ collections:
         media_folder: "/public/images/home"
         public_folder: ""
         editor:
-        preview: false
+        preview: true
         fields:
           - label: "Title"
             name: "title"
@@ -46,7 +46,7 @@ collections:
     media_folder: "/public/images/portfolio"
     public_folder: ""
     editor:
-      preview: false
+      preview: true
     fields: # The fields for each document, usually in front matter
       - label: "Title"
         name: "title"
@@ -64,6 +64,7 @@ collections:
         dateFormat: "DD/MM/YYYY"
         timeFormat: ""
       - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Background Music (mp3)", name: "background_audio", widget: "file", choose_url: "true" }  # mp3
       - label: "Tags"
         name: "tags"
         widget: "list"

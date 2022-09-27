@@ -1,22 +1,33 @@
 import React from "react";
-import { FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
-import ExternalLink from "./links/ExternalLink" ; 
+import {
+  FaTwitter,
+  // FaLinkedinIn,
+  FaInstagram,
+  FaEtsy,
+  FaTiktok,
+} from "react-icons/fa";
+import ExternalLink from "./links/ExternalLink";
 
 const socials = [
   {
-    id: "twitter",
-    Icon: FaTwitter,
-    href: "https://twitter.com/gemcloud",
-  },
-  {
-    id: "linkedin",
-    Icon: FaLinkedinIn,
-    href: "https://www.linkedin.com/in/gemcloud/",
-  },
-  {
     id: "instagram",
     Icon: FaInstagram,
-    href: "https://www.instagram.com/gemcloud.actor",
+    href: "https://www.instagram.com/phiagallery/?hl=en",
+  },
+  {
+    id: "etsy",
+    Icon: FaEtsy,
+    href: "https://www.etsy.com/shop/byPhia",
+  },
+  {
+    id: "tiktok",
+    Icon: FaTiktok,
+    href: "https://www.tiktok.com/@phiagallery",
+  },
+  {
+    id: "twitter",
+    Icon: FaTwitter,
+    href: "https://twitter.com/phiagallery",
   },
 ];
 
