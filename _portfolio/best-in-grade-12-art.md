@@ -3,7 +3,7 @@ title: "Best in Grade 12 art"
 description: "Exhibit opened last Saturday with a reception in the gallery"
 excerpt: "Sophia Guan, a Grade 12 student at Gleneagle secondary in Coquitlam, with her painting called Crossing. It shows a canal with a Chinese village to the left and Venice at the right"
 image: "Best_in_Grade12_art.png"
-background_audio: "/medias/Harry_Styles_Late_Night_Talking.mp3"
+background_audio: 
 date: "2020-01-30T00:00:00"
 tags: ["review"]
 ---
